@@ -29,16 +29,20 @@ body {
 .flex {
     display: flex;
 }
+
 .banner-title,
 .plants-title,
-.plant-lover-tytle {
+.plant-lover-tytle,
+.deal-tytle {
     font-size: 4rem;
     font-weight: bold;
     color: black;
 }
+
 .banner-para,
 .plants-para,
-.section-description {
+.section-description,
+.deal-para {
     color: rgba(0, 0, 0, 0.5);
     font-size: 1.3rem;
 }
@@ -74,6 +78,7 @@ body {
     align-items: end;
     width: 100%;
 }
+
 .title-span {
     color: #E95A08;
 }
@@ -87,36 +92,42 @@ body {
 .plants-title-container {
     text-align: center;
 }
+
 /* card-section */
-.plants-card-container{
+.plants-card-container {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
-.card{
+
+.card {
     text-align: center;
     border-radius: 10px;
-    box-shadow:0px 1px 5px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.08);
 }
-.card-img{
+
+.card-img {
     width: 90%;
     margin-top: 10px;
     border-radius: 10px;
 }
-.card-tytle{
+
+.card-tytle {
     font-size: 1.375rem;
     color: #111111;
     font-weight: 500;
     margin: 10px 0;
 }
-.card-price{
+
+.card-price {
     font-size: 1.375rem;
     color: #111111;
     font-weight: 600;
     margin: 10px 0;
 }
-.btn{
+
+.btn {
     color: white;
     font-weight: 600;
     background-color: #E95A08;
@@ -128,32 +139,122 @@ body {
     margin-bottom: 10px;
     border-radius: 5px;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: #ef7a36;
     transform: scale(1.05);
     transition: .3s;
 }
+
 /* plant-lover-section-styles */
-.plant-lovers{
+.plant-lovers {
     margin-top: 200px;
     gap: 60px;
     align-items: center;
 }
-.flower-store-img-container{
+
+.flower-store-img-container {
     position: relative;
 }
-.badge{
+
+.badge {
     width: 287px;
     position: absolute;
     top: -140px;
     right: -100px;
 }
-.plant-lover-container{
+
+.plant-lover-container {
     width: 50%;
 }
-.section-description{
+
+.section-description {
     margin: 25px 0;
 }
+/* deals-section-styles */
+.tytle-container{
+    text-align: center;
+    margin-top: 130px;
+}
+.deal-tytle{
+    font-size: 3.1rem;
+}
+/* deal-banner-style */
+.discount{
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+.shop-now{
+    font-weight: 600;
+    color: white;
+    text-decoration: underline;
+}
+#zabo{
+    font-size: 2.5rem;
+}
+#zabo-shop{
+    font-size: 1.8rem;
+}
+.bloom{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url('./assets/deal-bloom.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    width: 366px;
+    height: 200px;
+    grid-area: bloom;
+}
+.ana{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url('./assets/deal-ana.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    width: 366px;
+    height: 200px;
+    grid-area: ana;
+}
+.zabo{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url('./assets/deal-zabo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    width: 753px;
+    height: 423.13px;
+    grid-area: zabo;
+
+}
+.deal-banner-container{
+    display: grid;
+    grid-template-areas: 
+    " bloom zabo zabo"
+    " ana   zabo zabo"
+    ;
+    margin-top: 120px;
+    margin-left: 60px;
+    row-gap: 25px;
+    column-gap: 25px;
+}
+
+
 /* responsive-styles */
 @media screen and (max-width:640px) {
     .navbar {
@@ -186,43 +287,71 @@ body {
     .banner-img {
         width: 100%;
     }
-    .plants-title{
+
+    .plants-title {
         font-size: 1.5rem;
         margin: 60px 0 20px 0
     }
-    .plants-card-container{
-        grid-template-columns: repeat(2,1fr);
+
+    .plants-card-container {
+        grid-template-columns: repeat(2, 1fr);
         margin: 0 10px;
     }
-    .card-tytle{
+
+    .card-tytle {
         margin-top: 30px;
     }
-    .card-para{
+
+    .card-para {
         margin-bottom: 20px;
     }
-    .plant-lovers{
+
+    .plant-lovers {
         margin-top: 50px;
         flex-direction: column;
         width: 100%;
         gap: 30px;
     }
-    .flower-store-img-container{
+
+    .flower-store-img-container {
         width: 95%;
         justify-content: center;
     }
-    .flower-store-img{
+
+    .flower-store-img {
         width: 95%;
     }
-    .badge{
+
+    .badge {
         display: none;
     }
-    .plant-lover-container{
+
+    .plant-lover-container {
         width: 90%;
     }
-    .plant-lover-tytle{
+
+    .plant-lover-tytle {
         font-size: 1.5rem;
     }
-    .section-description{
+
+    .section-description {
         font-size: 0.875rem;
     }
-}   
+    .tytle-container{
+        margin-top: 50px;
+    }
+    .zabo,.ana,.bloom{
+        width: 90%;
+    }
+    .zabo{
+        height: 20vh;
+    }
+    .deal-banner-container{
+        margin-top: 50px;
+        grid-template-areas: 
+        " bloom "
+        " ana   "
+        " zabo  "
+        ;
+    }
+}
