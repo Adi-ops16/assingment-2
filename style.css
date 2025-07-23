@@ -21,6 +21,7 @@
 body {
     max-width: 1280px;
     margin: 0 auto;
+    background-color: rgb(245, 248, 255);
 }
 
 /* shared-styles */
@@ -28,8 +29,19 @@ body {
 .flex {
     display: flex;
 }
-
-
+.banner-title,
+.plants-title,
+.plant-lover-tytle {
+    font-size: 4rem;
+    font-weight: bold;
+    color: black;
+}
+.banner-para,
+.plants-para,
+.section-description {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.3rem;
+}
 
 /* navbar-styles */
 .navbar {
@@ -62,22 +74,8 @@ body {
     align-items: end;
     width: 100%;
 }
-
-.banner-title,
-.plants-title {
-    font-size: 4rem;
-    font-weight: bold;
-    color: black;
-}
-
 .title-span {
     color: #E95A08;
-}
-
-.banner-para,
-.plants-para {
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 1.3rem;
 }
 
 /* our-plants-section */
@@ -135,6 +133,27 @@ body {
     transform: scale(1.05);
     transition: .3s;
 }
+/* plant-lover-section-styles */
+.plant-lovers{
+    margin-top: 200px;
+    gap: 60px;
+    align-items: center;
+}
+.flower-store-img-container{
+    position: relative;
+}
+.badge{
+    width: 287px;
+    position: absolute;
+    top: -140px;
+    right: -100px;
+}
+.plant-lover-container{
+    width: 50%;
+}
+.section-description{
+    margin: 25px 0;
+}
 /* responsive-styles */
 @media screen and (max-width:640px) {
     .navbar {
@@ -173,11 +192,37 @@ body {
     }
     .plants-card-container{
         grid-template-columns: repeat(2,1fr);
+        margin: 0 10px;
     }
     .card-tytle{
         margin-top: 30px;
     }
     .card-para{
         margin-bottom: 20px;
+    }
+    .plant-lovers{
+        margin-top: 50px;
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+    }
+    .flower-store-img-container{
+        width: 95%;
+        justify-content: center;
+    }
+    .flower-store-img{
+        width: 95%;
+    }
+    .badge{
+        display: none;
+    }
+    .plant-lover-container{
+        width: 90%;
+    }
+    .plant-lover-tytle{
+        font-size: 1.5rem;
+    }
+    .section-description{
+        font-size: 0.875rem;
     }
 }   
