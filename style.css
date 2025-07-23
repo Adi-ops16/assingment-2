@@ -1,85 +1,183 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .noto-serif {
-  font-family: "Noto Serif", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 .inter {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
-body{
+
+body {
     max-width: 1280px;
     margin: 0 auto;
 }
 
 /* shared-styles */
 
-.flex{
+.flex {
     display: flex;
 }
 
 
 
 /* navbar-styles */
-.navbar{
+.navbar {
     justify-content: space-between;
     align-items: center;
     margin: 30px 0 120px 0;
 }
-.nav-links{
+
+.nav-links {
     gap: 3rem;
 }
-.nav-links > li{
+
+.nav-links>li {
     list-style: none;
 }
-.nav-link{
+
+.nav-link,
+.nav-cart {
     text-decoration: none;
     color: #8987A1;
 }
-.nav-link > span{
+
+.nav-link>span {
     color: black;
     font-weight: bold;
 }
+
 /* bannner-section-styles */
-.banner{
+.banner {
     align-items: end;
+    width: 100%;
 }
-.banner-title{
+
+.banner-title,
+.plants-title {
     font-size: 4rem;
     font-weight: bold;
     color: black;
 }
-.title-span{
+
+.title-span {
     color: #E95A08;
 }
-.banner-para{
+
+.banner-para,
+.plants-para {
     color: rgba(0, 0, 0, 0.5);
     font-size: 1.3rem;
 }
 
+/* our-plants-section */
+.plants-title {
+    font-size: 3.15rem;
+    margin: 120px 0 20px 0;
+}
 
+.plants-title-container {
+    text-align: center;
+}
+/* card-section */
+.plants-card-container{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.card{
+    text-align: center;
+    border-radius: 10px;
+    box-shadow:0px 1px 5px rgba(0, 0, 0, 0.08);
+}
+.card-img{
+    width: 90%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.card-tytle{
+    font-size: 1.375rem;
+    color: #111111;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.card-price{
+    font-size: 1.375rem;
+    color: #111111;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.btn{
+    color: white;
+    font-weight: 600;
+    background-color: #E95A08;
+    width: 90%;
+    padding: 20px 0;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: #ef7a36;
+    transform: scale(1.05);
+    transition: .3s;
+}
 /* responsive-styles */
 @media screen and (max-width:640px) {
-    .navbar{
+    .navbar {
         margin: 10px 16px;
     }
-    nav>ul>li>a{
+
+    .nav-list {
         display: none;
     }
-    .banner{
+
+    .banner {
+        align-items: start;
         flex-direction: column-reverse;
-        gap: 5rem;
+        gap: 1.75rem;
     }
-    .banner-para{
+
+    .banner-title {
+        font-size: 2rem;
+    }
+
+    .banner-para {
         margin-top: 1rem;
+        font-size: 0.875rem;
     }
-}
+
+    .banner-content {
+        margin: 0 16px;
+    }
+
+    .banner-img {
+        width: 100%;
+    }
+    .plants-title{
+        font-size: 1.5rem;
+        margin: 60px 0 20px 0
+    }
+    .plants-card-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .card-tytle{
+        margin-top: 30px;
+    }
+    .card-para{
+        margin-bottom: 20px;
+    }
+}   
