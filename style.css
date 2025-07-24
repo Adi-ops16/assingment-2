@@ -438,8 +438,9 @@ header,
         font-size: 1.5rem;
     }
 
-    .section-description {
+    .plant-description {
         font-size: 0.875rem;
+        margin-left: 15px;
     }
 
     /* deals-section-styles */
