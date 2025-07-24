@@ -27,10 +27,12 @@ body {
 header,
 .plants,
 .plant-lovers,
-.deals{
+.deals,
+.footer-container {
     max-width: 1240px;
     margin: 0 auto;
 }
+
 .flex {
     display: flex;
 }
@@ -39,7 +41,7 @@ header,
 .plants-title,
 .plant-lover-tytle,
 .deal-tytle,
-.email-title{
+.email-title {
     font-size: 4rem;
     font-weight: bold;
     color: black;
@@ -48,7 +50,8 @@ header,
 .banner-para,
 .plants-para,
 .section-description,
-.deal-para {
+.deal-para,
+.footer-description {
     color: rgba(0, 0, 0, 0.5);
     font-size: 1.3rem;
 }
@@ -177,38 +180,45 @@ header,
 .section-description {
     margin: 25px 0;
 }
+
 /* deals-section-styles */
-.tytle-container{
+.tytle-container {
     text-align: center;
     margin-top: 130px;
 }
-.deal-tytle{
+
+.deal-tytle {
     font-size: 3.1rem;
 }
+
 /* deal-banner-style */
-.discount{
+.discount {
     font-weight: bold;
     font-size: 20px;
     color: white;
 }
-.shop-now{
+
+.shop-now {
     font-weight: 600;
     color: white;
     text-decoration: underline;
 }
-#zabo{
+
+#zabo {
     font-size: 2.5rem;
 }
-#zabo-shop{
+
+#zabo-shop {
     font-size: 1.8rem;
 }
-.bloom{
+
+.bloom {
     text-align: center;
     justify-content: center;
     align-items: center;
     line-height: 40px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
-    url('./assets/deal-bloom.png');
+        url('./assets/deal-bloom.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -217,13 +227,14 @@ header,
     height: 200px;
     grid-area: bloom;
 }
-.ana{
+
+.ana {
     text-align: center;
     justify-content: center;
     align-items: center;
     line-height: 40px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
-    url('./assets/deal-ana.png');
+        url('./assets/deal-ana.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -232,13 +243,14 @@ header,
     height: 200px;
     grid-area: ana;
 }
-.zabo{
+
+.zabo {
     text-align: center;
     justify-content: center;
     align-items: center;
     line-height: 40px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
-    url('./assets/deal-zabo.png');
+        url('./assets/deal-zabo.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -248,19 +260,22 @@ header,
     grid-area: zabo;
 
 }
-.deal-banner-container{
+
+.deal-banner-container {
     display: grid;
-    grid-template-areas: 
-    " bloom zabo zabo"
-    " ana   zabo zabo"
+    grid-template-areas:
+        " bloom zabo zabo"
+        " ana   zabo zabo"
     ;
     margin-top: 120px;
     margin-left: 60px;
     row-gap: 25px;
     column-gap: 25px;
 }
+
 /* email-section-title */
-.email{
+.email {
+    max-width: 1440px;
     height: 533px;
     margin: 50px 0;
     justify-content: center;
@@ -268,20 +283,24 @@ header,
     background-image: url('./assets/news-letter-bg.png');
     background-repeat: no-repeat;
 }
-.email-container{
+
+.email-container {
     width: 100%;
     text-align: center;
 }
-.email-title{
+
+.email-title {
     color: white;
     margin-bottom: 20px;
 }
-.input-email{
-    padding:12px 20px;
+
+.input-email {
+    padding: 12px 20px;
     width: 50%;
     outline: none;
 }
-.btn-submit{
+
+.btn-submit {
     padding: 12px 50px;
     background-color: #E95A08;
     border: none;
@@ -290,11 +309,33 @@ header,
     cursor: pointer;
     transition: 0.3s;
 }
-.btn-submit:hover{
+
+.btn-submit:hover {
     background-color: #ef7a36;
     transform: scale(1.02);
     transition: 0.3s;
 }
+
+/* footer-styles */
+.footer-container{
+    justify-content: center;
+    /* margin: 50px auto; */
+    gap: 110px;
+}
+.about-container{
+    flex-direction: column;
+    line-height: 50px;
+}
+.footer-link{
+    text-decoration: none;
+    color: rgba(107, 114, 128, 1);
+}
+.icons-container{
+    align-items: center;
+    gap: 24px;
+}
+
+
 /* responsive-styles */
 @media screen and (max-width:640px) {
     .navbar {
@@ -377,21 +418,41 @@ header,
     .section-description {
         font-size: 0.875rem;
     }
-    .tytle-container{
+
+    .tytle-container {
         margin-top: 50px;
     }
-    .zabo,.ana,.bloom{
+
+    .zabo,
+    .ana,
+    .bloom {
         width: 90%;
     }
-    .zabo{
+
+    .zabo {
         height: 20vh;
     }
-    .deal-banner-container{
+
+    .deal-banner-container {
         margin-top: 50px;
-        grid-template-areas: 
-        " bloom "
-        " ana   "
-        " zabo  "
+        grid-template-areas:
+            " bloom "
+            " ana   "
+            " zabo  "
         ;
+        margin-left: 30px;
+    }
+
+    .email {
+        background-position: center;
+    }
+
+    .email-title {
+        font-size: 1.6rem;
+    }
+    .footer-container{
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 10px;
     }
 }
