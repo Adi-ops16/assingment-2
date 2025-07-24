@@ -19,13 +19,18 @@
 }
 
 body {
-    max-width: 1280px;
-    margin: 0 auto;
+    max-width: 1440px;
     background-color: rgb(245, 248, 255);
 }
 
 /* shared-styles */
-
+header,
+.plants,
+.plant-lovers,
+.deals{
+    max-width: 1240px;
+    margin: 0 auto;
+}
 .flex {
     display: flex;
 }
@@ -33,7 +38,8 @@ body {
 .banner-title,
 .plants-title,
 .plant-lover-tytle,
-.deal-tytle {
+.deal-tytle,
+.email-title{
     font-size: 4rem;
     font-weight: bold;
     color: black;
@@ -253,8 +259,42 @@ body {
     row-gap: 25px;
     column-gap: 25px;
 }
-
-
+/* email-section-title */
+.email{
+    height: 533px;
+    margin: 50px 0;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./assets/news-letter-bg.png');
+    background-repeat: no-repeat;
+}
+.email-container{
+    width: 100%;
+    text-align: center;
+}
+.email-title{
+    color: white;
+    margin-bottom: 20px;
+}
+.input-email{
+    padding:12px 20px;
+    width: 50%;
+    outline: none;
+}
+.btn-submit{
+    padding: 12px 50px;
+    background-color: #E95A08;
+    border: none;
+    color: white;
+    margin-left: -5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-submit:hover{
+    background-color: #ef7a36;
+    transform: scale(1.02);
+    transition: 0.3s;
+}
 /* responsive-styles */
 @media screen and (max-width:640px) {
     .navbar {
